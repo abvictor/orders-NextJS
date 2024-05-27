@@ -1,6 +1,7 @@
-## Projeto desenvolvido durante estudo do framework Next JS
+## Projeto desenvolvido durante estudo do framework Next JS e Express + Prisma + Postgress
 
-![orders](https://github.com/abvictor/orders-NextJS/assets/43121767/6e3952f5-2ec0-458d-bd4c-7930db11a0e4)
+![orders](https://github.com/abvictor/orders-NextJS/assets/43121767/5ad9a9de-e74d-4c77-ba7d-956dd4517100)
+
 
 ## Sobre o projeto
 
