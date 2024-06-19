@@ -2,6 +2,8 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from 'next/link'
 
+import {GetServerSideProps} from 'next'
+
 import { FormEvent, useContext, useState } from "react";
 import { AuthContext } from "@/contexts/AuthContext";
 
@@ -11,6 +13,7 @@ import { Button } from "@/components/ui/Button";
 import logoImg from '../../public/logo.png'
 import styles from '@/styles/home.module.scss'
 import { toast } from "react-toastify";
+import { canSSRGuest } from "@/utils/canSSRGuest";
 
 
 
@@ -69,3 +72,10 @@ export default function Home() {
   );  
 }
 
+
+export const getServerSideProps = canSSRGuest(async (context) => {
+  
+  return {
+    props: {}
+  }
+})

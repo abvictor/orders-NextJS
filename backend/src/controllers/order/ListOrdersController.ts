@@ -7,7 +7,7 @@ class ListOrdersController{
         const listOrdersSerivce = new ListOrdersService()
 
         const orders = await listOrdersSerivce.execute()
-
+        console.log(orders)
         return res.json(orders)
     }
 }

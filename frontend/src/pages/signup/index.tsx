@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/Button";
 
 import { AuthContext } from "@/contexts/AuthContext";
 
-import logoImg from '../../../public/logo.svg'
+import logoImg from '../../../public/logo.png'
 import styles from '@/styles/home.module.scss'
 import { toast } from "react-toastify";
 

@@ -1,21 +1,20 @@
-import { Request, Response } from "express";
-import { AddItemService } from "../../services/order/AddItemOrderService";
-
+import {Request, Response} from 'express'
+import { AddItemService } from '../../services/order/AddItemOrderService'
 class AddItemController{
-    async handle(req: Request, res: Response){
-        
-        const { amount, order_id, product_id } = req.body
+  async handle(req: Request, res: Response){
+    const { order_id, product_id, amount } = req.body;
 
-        const addItemService = new AddItemService();
+    const addItem = new AddItemService();
 
-        const order = addItemService.execute({
-                amount: amount,
-                order_id: order_id,
-                product_id: product_id
-        })
+    const order = await addItem.execute({
+      order_id,
+      product_id,
+      amount
+    })
 
-        return res.json(order)
-    }
+    return res.json(order);
+
+  }
 }
 
 export { AddItemController }
